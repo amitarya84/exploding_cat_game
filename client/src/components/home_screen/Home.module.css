@@ -1,0 +1,22 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.startBtn{
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    max-width: 400px;
+    width: 80%;
+    cursor: pointer;
+    color: #764abc;
+    color: #fff;
+    background: #764abc;
+    border: 2px solid #fff;
+}
