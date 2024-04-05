@@ -6,7 +6,6 @@ import { card, shuffleDeck } from '../store/features/gameSlice';
 import Message from './Message';
 import Popup from './Popup';
 import WinPopup from './winPopup';
-import Scoreboard from './scoreboard/scoreboard';
 
 
 export default function CardContainer({ cards }: { cards: card[] }) {
@@ -44,7 +43,6 @@ export default function CardContainer({ cards }: { cards: card[] }) {
                 </div>
                 {hasDifuse && <MiniDefuseCard />}
             </div>
-            <Scoreboard />
             <div className={styles.cardContainer}>
                 {
                     cards?.map(card => <Card diffuseBomb={diffuseBomb} key={card.type + Math.random()} card={card} />)

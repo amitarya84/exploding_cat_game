@@ -13,13 +13,13 @@ export const PAGES = {
   GAME: "GAME"
 }
 
-export const BASE_URL = 'http://localhost:4000/';
-// export const BASE_URL = window.location.href;
+// export const BASE_URL = 'http://localhost:4000/';
+export const BASE_URL = window.location.href;
 
 function App() {
   const deck = useAppSelector(state => state.game.deck);
   // const [started, setStarted] = useState(false);
-  const [page, setPage] = useState(PAGES.LOG_IN);
+  const [page, setPage] = useState(PAGES.HOME);
 
   const user = useAppSelector(state => state.user.user)
   const current_game_id = useAppSelector(state => state.game.current_game_id)

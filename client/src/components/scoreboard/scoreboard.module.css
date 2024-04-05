@@ -1,0 +1,18 @@
+.container{
+    /* text-align: center; */
+}
+.table{
+    border: 2px solid white;
+    /* max-width: 600px; */
+    width: 80%;
+}
+.table td, 
+.table th{
+    padding: 5px 10px;
+    min-width: 125px;
+    text-align: left;
+}
+.heading{
+    margin: 10px 0;
+    text-align: center;
+}

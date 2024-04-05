@@ -1,6 +1,7 @@
 import { BASE_URL } from '../../App';
 import { setCurrentGameDbData, setCurrentGameId } from '../../store/features/gameSlice';
 import { useAppDispatch, useAppSelector } from '../../store/store';
+import Scoreboard from '../scoreboard/scoreboard';
 import styles from './Home.module.css';
 
 export default function Home() {
@@ -34,6 +35,8 @@ export default function Home() {
     <div className={styles.container}>
       <h2>😼Exploading Cat!😼</h2>
       <button onClick={startGame} className={styles.startBtn}>Start Game</button>
+      {/* <button  className={styles.startBtn}>Leaderboard</button> */}
+      <Scoreboard />
     </div>
   )
 }

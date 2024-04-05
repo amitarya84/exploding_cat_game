@@ -189,5 +189,22 @@ router.get('/score/:user_id', async (req, res) => {
     }
 })
 
-
+router.get('/leaderboard', async (req, res) => {
+    try{
+        const allGamesCollection = await game.find().sort({totalWins: -1});
+        console.log(allGamesCollection)
+        let leaderboardData = allGamesCollection.map(boards => {
+            return {
+                username: boards.username,
+                totalWins: boards.totalWins,
+                totalLoses: boards.totalLoses
+            }
+        })
+        res.json({
+            leaderboard: leaderboardData
+        })
+    }catch(err){
+        console.log('leaderboard err', err)
+    }
+})
 module.exports = router;
